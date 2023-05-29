@@ -44,7 +44,7 @@ func main() {
 	defer cancel()
 
 	if err := app.Start(startCtx); err != nil {
-		slog.ErrorCtx(startCtx, "failed to start application", sloghelper.Error(err))
+		slog.ErrorCtx(startCtx, "启动应用失败", sloghelper.Error(err))
 		os.Exit(1)
 	}
 
